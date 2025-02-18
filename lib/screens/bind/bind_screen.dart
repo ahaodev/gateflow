@@ -1,21 +1,17 @@
-import 'dart:ffi';
+import 'dart:developer' as developer;
 import 'dart:ui';
 
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gateflow/models/devices_entity.dart';
 import 'package:gateflow/models/discovery_entity.dart';
-import 'package:gateflow/net/http.dart';
 import 'package:gateflow/screens/bind/components/edit_dialog.dart';
 import 'package:gateflow/utils/http.dart';
-import 'package:gateflow/wiidget/mytoast.dart';
+import 'package:provider/provider.dart';
+
 import '../../../constants.dart';
 import '../../controllers/MenuItemController.dart';
 import '../../responsive.dart';
-import 'package:provider/provider.dart';
-import 'dart:developer' as developer;
-
 import '../../wiidget/lodging.dart';
 
 class BindScreen extends StatefulWidget {
