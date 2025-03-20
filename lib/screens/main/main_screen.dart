@@ -7,13 +7,14 @@ import '../bind/bind_screen.dart';
 import '../dashboard/dashboard_screen.dart';
 import '../setting/setting_screen.dart';
 import '../test/test_screen.dart';
+import '../voice/voice.dart';
 import 'components/side_menu.dart';
 
 class MainScreen extends StatelessWidget {
   final PageController _controller = PageController(
     initialPage: 0,
   );
-  var pages = [DashboardScreen(), TestScreen(), SettingScreen(), BindScreen()];
+  var pages = [DashboardScreen(), TestScreen(), SettingScreen(), VoiceScreen(),BindScreen()];
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class MainScreen extends StatelessWidget {
               ),
             Expanded(
               // It takes 5/6 part of the screen
-              flex: 5,
+              flex: 6,
               child: PageView(
                 scrollDirection: Axis.vertical,
                 controller: _controller,

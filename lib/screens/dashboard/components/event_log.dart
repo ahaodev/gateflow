@@ -67,15 +67,18 @@ class _EventLogs extends State<EventLogs> {
               minWidth: 600,
               columns: const [
                 DataColumn2(
+                  size: ColumnSize.S,
                   label: Text("时间"),
                 ),
                 DataColumn2(
                   label: Text("点位"),
                 ),
                 DataColumn2(
+                  size: ColumnSize.S,
                   label: Text("事件"),
                 ),
                 DataColumn2(
+                  size: ColumnSize.L,
                   label: Text("内容"),
                 ),
               ],

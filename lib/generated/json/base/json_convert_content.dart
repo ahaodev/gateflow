@@ -12,10 +12,12 @@ import 'package:gateflow/models/discovery_entity.dart';
 import 'package:gateflow/models/events_entity.dart';
 import 'package:gateflow/models/events_page_entity.dart';
 import 'package:gateflow/models/hardware_entity.dart';
+import 'package:gateflow/models/icbc_config_entity.dart';
 import 'package:gateflow/models/login_entity.dart';
 import 'package:gateflow/models/macurl_entity.dart';
 import 'package:gateflow/models/passed_total_entity.dart';
 import 'package:gateflow/models/response_entity.dart';
+import 'package:gateflow/models/uchi_config_entity.dart';
 import 'package:gateflow/models/ws_hds_entity.dart';
 
 JsonConvert jsonConvert = JsonConvert();
@@ -80,7 +82,8 @@ class JsonConvert {
       return null;
     }
     try {
-      return value.map((dynamic e) => _asT<T>(e, enumConvert: enumConvert))
+      return value
+          .map((dynamic e) => _asT<T>(e, enumConvert: enumConvert))
           .toList();
     } catch (e, stackTrace) {
       debugPrint('asT<$T> $e $stackTrace');
@@ -167,7 +170,8 @@ class JsonConvert {
           ConfigResponseData.fromJson(e)).toList() as M;
     }
     if (<ConfigResponseDataDeFalseVoice>[] is M) {
-      return data.map<ConfigResponseDataDeFalseVoice>((
+      return data
+          .map<ConfigResponseDataDeFalseVoice>((
           Map<String, dynamic> e) => ConfigResponseDataDeFalseVoice.fromJson(e))
           .toList() as M;
     }
@@ -225,6 +229,10 @@ class JsonConvert {
       return data.map<HardwareEntity>((Map<String, dynamic> e) =>
           HardwareEntity.fromJson(e)).toList() as M;
     }
+    if (<IcbcConfigEntity>[] is M) {
+      return data.map<IcbcConfigEntity>((Map<String, dynamic> e) =>
+          IcbcConfigEntity.fromJson(e)).toList() as M;
+    }
     if (<LoginEntity>[] is M) {
       return data.map<LoginEntity>((Map<String, dynamic> e) =>
           LoginEntity.fromJson(e)).toList() as M;
@@ -248,6 +256,10 @@ class JsonConvert {
     if (<ResponseEntity>[] is M) {
       return data.map<ResponseEntity>((Map<String, dynamic> e) =>
           ResponseEntity.fromJson(e)).toList() as M;
+    }
+    if (<UchiConfigEntity>[] is M) {
+      return data.map<UchiConfigEntity>((Map<String, dynamic> e) =>
+          UchiConfigEntity.fromJson(e)).toList() as M;
     }
     if (<WsHdsEntity>[] is M) {
       return data.map<WsHdsEntity>((Map<String, dynamic> e) =>
@@ -295,12 +307,14 @@ class JsonConvertClassCollection {
     (EventsPageEntity).toString(): EventsPageEntity.fromJson,
     (EventsPageData).toString(): EventsPageData.fromJson,
     (HardwareEntity).toString(): HardwareEntity.fromJson,
+    (IcbcConfigEntity).toString(): IcbcConfigEntity.fromJson,
     (LoginEntity).toString(): LoginEntity.fromJson,
     (MacurlEntity).toString(): MacurlEntity.fromJson,
     (MacurlData).toString(): MacurlData.fromJson,
     (PassedTotalEntity).toString(): PassedTotalEntity.fromJson,
     (PassedTotalDeviceTotals).toString(): PassedTotalDeviceTotals.fromJson,
     (ResponseEntity).toString(): ResponseEntity.fromJson,
+    (UchiConfigEntity).toString(): UchiConfigEntity.fromJson,
     (WsHdsEntity).toString(): WsHdsEntity.fromJson,
   };
 

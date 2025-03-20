@@ -172,22 +172,26 @@ class _BindScreen extends State<BindScreen> {
               columnSpacing: defaultPadding,
               minWidth: 600,
               columns: const [
-                DataColumn(
+                DataColumn2(
                   label: Text("点位"),
                 ),
                 DataColumn(
                   label: Text("设备号"),
                 ),
-                DataColumn(
+                DataColumn2(
+                  size: ColumnSize.S,
                   label: Text("IP"),
                 ),
-                DataColumn(
+                DataColumn2(
+                  size: ColumnSize.S,
                   label: Text("版本"),
                 ),
-                DataColumn(
+                DataColumn2(
+                  size: ColumnSize.S,
                   label: Text("状态"),
                 ),
-                DataColumn(
+                DataColumn2(
+                  size: ColumnSize.S,
                   label: Text("操作"),
                 ),
               ],

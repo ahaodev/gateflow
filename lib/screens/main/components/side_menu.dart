@@ -44,10 +44,17 @@ class SideMenu extends StatelessWidget {
             },
           ),
           DrawerListTile(
+            title: "语音设定",
+            icon: Icons.settings_voice,
+            press: () {
+              pageController.jumpToPage(3);
+            },
+          ),
+          DrawerListTile(
             title: "设备绑定",
             icon: Icons.devices,
             press: () {
-              pageController.jumpToPage(3);
+              pageController.jumpToPage(4);
             },
           ),
           DrawerListTile(
