@@ -368,7 +368,6 @@ class _NetScanner extends State<NetScanner> {
                   },
                   icon: const Icon(
                     Icons.add,
-                    color: Colors.blue,
                   ),
                   label: Text("绑定设备"),
                 ),
