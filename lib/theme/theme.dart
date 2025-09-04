@@ -16,7 +16,7 @@ ThemeData ThemeDark(context) {
   return ThemeData.dark().copyWith(
       useMaterial3: false,
       // backgroundColor: bgColor,
-      dialogTheme: DialogTheme(backgroundColor: bgColor),
+      dialogTheme: DialogThemeData(backgroundColor: bgColor),
       scaffoldBackgroundColor: bgColor,
       textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
           .apply(
@@ -26,7 +26,7 @@ ThemeData ThemeDark(context) {
       canvasColor: secondaryColor,
       cardColor: secondaryColor,
       dividerColor: secondaryColor,
-      cardTheme: const CardTheme(
+      cardTheme: const CardThemeData(
         elevation: 5.0,
         color: secondaryColor,
         shape: RoundedRectangleBorder(
@@ -50,7 +50,7 @@ ThemeData ThemeDark(context) {
 ThemeData ThemeLight(context) {
   return ThemeData.light().copyWith(
     useMaterial3: false,
-    dialogTheme: DialogTheme(backgroundColor: Colors.white),
+    dialogTheme: DialogThemeData(backgroundColor: Colors.white),
     scaffoldBackgroundColor: Colors.white,
     canvasColor:  Colors.white,
     cardColor: Colors.white,
@@ -68,7 +68,7 @@ ThemeData ThemeLight(context) {
         style: TextButton.styleFrom(
           foregroundColor: Colors.blue, // 设置按钮文本颜色为蓝色
         )),
-    cardTheme: const CardTheme(
+    cardTheme: const CardThemeData(
       elevation: 5.0,
       color: Colors.white,
       shape: RoundedRectangleBorder(
